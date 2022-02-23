@@ -1,13 +1,12 @@
-import { AzureFunction, Context } from "@azure/functions"
+import { AzureFunction, Context } from '@azure/functions'
 
 const timerTrigger: AzureFunction = async function (context: Context, myTimer: any): Promise<void> {
-    const timeStamp = new Date().toISOString();
+  const timeStamp = new Date().toISOString()
 
-    if (myTimer.IsPastDue)
-    {
-        context.log('Timer function is running late!');
-    }
-    context.log('Timer trigger function ran!', timeStamp);
-};
+  if (myTimer.IsPastDue) {
+    context.log('Timer function is running late!')
+  }
+  context.log('Timer trigger function ran!', timeStamp)
+}
 
-export default timerTrigger;
+export default timerTrigger
